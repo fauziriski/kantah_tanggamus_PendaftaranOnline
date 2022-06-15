@@ -128,7 +128,7 @@
                                             <td><a href="/pemecahan/form-pendaftaran">Pemecahan</a></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="">Pemisahan</a></td>
+                                            <td><a href="/pemisahan/form-pendaftaran">Pemisahan</a></td>
                                         </tr>
                                         <tr>
                                             <td><a href="">Penggabungan</a></td>

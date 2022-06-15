@@ -102,16 +102,16 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="title my-0">
-                            <h3><b>Pendaftaran Peralihan Hak - Pemecahan</b></h3>
+                            <h3><b>Pendaftaran Peralihan Hak - Pemisahan</b></h3>
                         </div>
                     </div>
                 </div>
-                <form action="/pemecahan/printPdf" method="post">
+                <form action="/pemisahan/printPdf" method="post">
                     @csrf
                     <div class="formulir">
                         <table width="100%">
                             <tr>
-                                <td width="72%">Perihal: <u>Pendaftaran Pemecahan</u></td>
+                                <td width="72%">Perihal: <u>Pendaftaran Pemisahan</u></td>
                                 <td>Kepada Yth:</td>
                             </tr>
                             <tr>
