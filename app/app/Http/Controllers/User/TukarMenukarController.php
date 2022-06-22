@@ -10,6 +10,10 @@ class TukarMenukarController extends Controller
 {
     public function index()
     {
+        return view('user.tukar_menukar.index');
+    }
+    public function create()
+    {
         return view('user.tukar_menukar.form_pendaftaran');
     }
 

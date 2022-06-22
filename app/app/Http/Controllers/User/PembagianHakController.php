@@ -10,6 +10,11 @@ class PembagianHakController extends Controller
 {
     public function index()
     {
+        return view('user.pembagian_hak.index');
+    }
+
+    public function create()
+    {
         return view('user.pembagian_hak.form_pendaftaran');
     }
 

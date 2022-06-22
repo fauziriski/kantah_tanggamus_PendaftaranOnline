@@ -10,6 +10,11 @@ class PemisahanController extends Controller
 {
     public function index()
     {
+        return view('user.pemisahan.index');
+    }
+
+    public function create()
+    {
         return view('user.pemisahan.form_pendaftaran');
     }
 

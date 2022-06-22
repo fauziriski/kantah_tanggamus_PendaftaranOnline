@@ -10,6 +10,11 @@ class LelangController extends Controller
 {
     public function index()
     {
+        return view('user.lelang.index');
+    }
+
+    public function create()
+    {
         return view('user.lelang.form_pendaftaran');
     }
 

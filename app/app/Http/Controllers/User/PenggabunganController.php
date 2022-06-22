@@ -11,6 +11,11 @@ class PenggabunganController extends Controller
 
     public function index()
     {
+        return view('user.penggabungan.index');
+    }
+
+    public function create()
+    {
         return view('user.penggabungan.form_pendaftaran');
     }
 

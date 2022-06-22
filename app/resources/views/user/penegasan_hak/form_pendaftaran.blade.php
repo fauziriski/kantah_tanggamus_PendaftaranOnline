@@ -107,6 +107,7 @@
                     </div>
                 </div>
                 <form action="/penegasan-hak/printPdf" method="post">
+                    @csrf
                     <div class="row">
                         <div class="col-xl-9 col-lg-9 col-md-6 col-sm-12 col-12">
                             Perihal : <u>Pendaftaran SK Penegasan/Penetapan</u>
@@ -114,8 +115,8 @@
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                             Kepada<br>
                             Yth. Kepala Kantor Pertanahan,<br>
-                            Kota Administrasi Jakarta Timur<br>
-                            Di Jakarta
+                            Kota Administrasi Tanggamus<br>
+                            Di Kota Agung
                         </div>
                         <div class="col-12">
                             <br>
@@ -140,18 +141,18 @@
                                 maxlength="13" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
                             Alamat Rumah
                             <input type="text" class="form-control" name="alamat_rumah"><br>
-                            Kelurahan
-                            <input type="text" class="form-control" name="kelurahan"><br>
                             RT.
                             <input type="text" class="form-control" name="rt"><br>
                             RW.
                             <input type="text" class="form-control" name="rw"><br>
                             No.
                             <input type="text" class="form-control" name="no"><br>
+                            Kelurahan
+                            <input type="text" class="form-control" name="kelurahan"><br>
                             Telepon
                             <input type="text" class="form-control" name="telepon" min="1" step="1" maxlength="13"
                                 onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br>
-                            Jakarta
+                            Lampung
                             <input type="text" class="form-control" name="jakarta"><br>
                             dalam hal ini bertindak untuk dan atas nama :
                             <input type="text" class="form-control" name="atasnama"><br>
@@ -164,11 +165,11 @@
                             <input type="text" class="form-control" name="rttanah"><br>
                             RW.
                             <input type="text" class="form-control" name="rwtanah"><br>
-                            Kecamatan
-                            <input type="text" class="form-control" name="kecamatantanah"><br>
                             Kelurahan
                             <input type="text" class="form-control" name="kelurahantanah"><br>
-                            Jakarta Timur.<br>
+                            Kecamatan
+                            <input type="text" class="form-control" name="kecamatantanah"><br>
+                            Tanggamus.<br>
                             Tanah tersebut dikuasai oleh:
                             <div class="form-check mt-1">
                                 <label class="form-check-label">

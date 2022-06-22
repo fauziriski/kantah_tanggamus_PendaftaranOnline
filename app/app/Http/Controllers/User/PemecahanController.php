@@ -10,6 +10,12 @@ class PemecahanController extends Controller
 {
     public function index()
     {
+        return view('user.pemecahan.index');
+    }
+
+
+    public function create()
+    {
         return view('user.pemecahan.form_pendaftaran');
     }
 

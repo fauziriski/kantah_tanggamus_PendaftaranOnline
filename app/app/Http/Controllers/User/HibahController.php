@@ -11,6 +11,11 @@ class HibahController extends Controller
 {
     public function index()
     {
+        return view('user.hibah.index');
+    }
+
+    public function create()
+    {
         return view('user.hibah.form_pendaftaran');
     }
 

@@ -10,6 +10,11 @@ class KonversiController extends Controller
 {
     public function index()
     {
+        return view('user.konversi.index');
+    }
+
+    public function create()
+    {
         return view('user.konversi.form_pendaftaran');
     }
 

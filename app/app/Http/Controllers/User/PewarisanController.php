@@ -10,6 +10,10 @@ class PewarisanController extends Controller
 {
     public function index()
     {
+        return view('user.pewarisan.index');
+    }
+    public function create()
+    {
         return view('user.pewarisan.form_pendaftaran');
     }
 
