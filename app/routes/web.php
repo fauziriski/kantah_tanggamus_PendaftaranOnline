@@ -35,7 +35,17 @@ use App\Http\Controllers\User\PengukuranUntukMengetahuiLuasController as Penguku
 use App\Http\Controllers\User\PerpanjanganHakGunaBangunanDanHakPakaiController as PerpanjanganHakGunaBangunanDanHakPakai;
 use App\Http\Controllers\User\PerpanjanganHakGunaUsahaController as PerpanjanganHakGunaUsaha;
 use App\Http\Controllers\User\WakafDariTanahTerdaftarController as WakafDariTanahTerdaftar;
-
+use App\Http\Controllers\User\PerpanjanganHakRumahSusunController as PerpanjanganHakRusun;
+use App\Http\Controllers\User\PendaftaranHakMilikRusunController as PendaftaranHakMilikRusun;
+use App\Http\Controllers\User\PendaftaranRoyaController as PendaftaranRoya;
+use App\Http\Controllers\User\PerubahanKrediturController as PerubahanKreditur;
+use App\Http\Controllers\User\PeralihanHakTanggunganController as PeralihanHakTanggungan;
+use App\Http\Controllers\User\SuratKeteranganPendaftaranTanahController as SuratKeteranganPendaftaranTanah;
+use App\Http\Controllers\User\PenggantianSertipikatKarenaBlankoLamaController as PenggantianSertipikatKarenaBlankoLama;
+use App\Http\Controllers\User\PenggantianSertipikatKarenaRusakController as PenggantianSertipikatKarenaRusak;
+use App\Http\Controllers\User\PenggantianSertipikatKarenaHilangController as PenggantianSertipikatKarenaHilang;
+use App\Http\Controllers\User\PermohonanUntukPengukuranGambarSituasiController as PermohonanUntukPengukuranGambarSituasi;
+use App\Http\Controllers\User\PerubahanHakController as PerubahanHak;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -154,6 +164,7 @@ Route::get('/pemberian-hak-pakai-badan-hukum', [PemberianHakPakaiBadanHukum::cla
 
 // Pemberian Hak Pakai Instansi/Badan Usaha Pemerintah
 Route::get('/pemberian-hak-pakai-instansi-badan-usaha-pemerintah', [PemberianHakPakaiInstansiBadanUsahaPemerintah::class, 'index'])->name('pemberian_hak_pakai_instansi_badan_usaha_pemerintah');
+Route::get('/pemberian-hak-pakai-instansi-badan-usaha-pemerintah/form-pendaftaran', [PemberianHakPakaiInstansiBadanUsahaPemerintah::class, 'create'])->name('pemberian_hak_pakai_instansi_badan_usaha_pemerintah.form_pendaftaran');
 
 // Pembaruan Hak Guna Usaha Perorangan
 Route::get('/pembaruan-hak-guna-usaha-perorangan', [PembaruanHakGunaUsahaPerorangan::class, 'index'])->name('pembaruan_hak_guna_usaha_perorangan');
@@ -183,13 +194,48 @@ Route::get('/perpanjangan-hak-guna-bangunan-dan-hak-pakai', [PerpanjanganHakGuna
 Route::get('/perpanjangan-hak-guna-usaha', [PerpanjanganHakGunaUsaha::class, 'index'])->name('perpanjangan_hak_guna_usaha');
 
 // Perubahan Hak
-Route::get('/perubahan-hak', [PembaruanHakPakaiPerorangan::class, 'index'])->name('perubahan_hak');
+Route::get('/perubahan-hak', [PerubahanHak::class, 'index'])->name('perubahan_hak');
+Route::get('/perubahan-hak/form-pendaftaran', [PerubahanHak::class, 'create'])->name('perubahan_hak.form_pendaftaran');
 
 // Wakaf Dari Tanah Terdaftar
 Route::get('/wakaf-dari-tanah-terdaftar', [WakafDariTanahTerdaftar::class, 'index'])->name('wakaf_dari_tanah_terdaftar');
+Route::get('/wakaf-dari-tanah-terdaftar/form-pendaftaran', [WakafDariTanahTerdaftar::class, 'create'])->name('wakaf_dari_tanah_terdaftar.form_pendaftaran');
 
 // Pengembalian Batas
 Route::get('/pengembalian-batas', [PengembalianBatas::class, 'index'])->name('pengembalian_batas');
+Route::get('/pengembalian-batas/form-pendaftaran', [PengembalianBatas::class, 'create'])->name('pengembalian_batas.form_pendaftaran');
 
 // Pengukuran Untuk Mengetahui Luas
 Route::get('/pengukuran-untuk-mengetahui-luas', [PengukuranUntukMengetahuiLuas::class, 'index'])->name('pengukuran_untuk_mengetahui_luas');
+
+
+//Perpanjangan Hak Rumah Susun
+Route::get('/perpanjangan-hak-milik-rumah-susun',[PerpanjanganHakRusun::class, 'index'])->name('perpanjangan_hak_milik_rumah_susun.form_pendaftaran');
+
+//Pendaftaran Hak Milik Rusun
+Route::get('/pendaftaran-hak-milik-rusun/form-pendaftaran', [PendaftaranHakMilikRusun::class, 'index'])->name('pendaftaran_hak_milik_rusun.form_pendaftaran');
+
+//Pendaftaran Roya
+Route::get('/pendaftaran-roya/form-pendaftaran', [PendaftaranRoya::class, 'index'])->name('pendaftaran_roya.form_pendaftran');
+
+//Perubahan Kreditur
+Route::get('/perubahan-kreditur/form-pendaftaran', [PerubahanKreditur::class, 'index'])->name('perubahan_kreditur.form_pendaftaran');
+
+//Peralihan Hak Tanggungan
+Route::get('/peralihan-hak-tanggungan/form-pendaftaran', [PeralihanHakTanggungan::class, 'index'])->name('peralihan_hak_tanggungan.form_pendaftaran');
+
+//Surat Keterangan Pendaftaran Tanah
+Route::get('/surat-keterangan-pendaftaran-tanah/form-pendaftaran', [SuratKeteranganPendaftaranTanah::class, 'index'])->name('surat_keterangan_pendaftaran_tanah.form_pendaftaran');
+
+//Penggantian Sertipikat Karena Blanko Lama
+Route::get('/penggantian-sertipikat-karena-blanko-lama/form-pendaftaran', [PenggantianSertipikatKarenaBlankoLama::class, 'index'])->name('penggantian_sertifikat_karena_blanko_lama.form_pendaftaran');
+
+//Penggantian Sertipikat Karena Blanko Lama
+Route::get('/penggantian-sertipikat-karena-rusak/form-pendaftaran', [PenggantianSertipikatKarenaRusak::class, 'index'])->name('penggantian_sertifikat_karena_rusak.form_pendaftaran');
+
+//Penggantian Sertipikat Karena Hilang
+Route::get('/penggantian-sertipikat-karena-hilang/form-pendaftaran', [PenggantianSertipikatKarenaHilang::class, 'index'])->name('penggantian_sertifikat_karena_hilang.form_pendaftaran');
+
+//Permohonan Untuk Pengukuran Gambar Situasi
+Route::get('/permohonan-untuk-pengukuran-gambar-situasi/form-pendaftaran', [PermohonanUntukPengukuranGambarSituasi::class, 'index'])->name('permohonan_untuk_pengukuran_gambar_situasi.form_pendaftaran');
+

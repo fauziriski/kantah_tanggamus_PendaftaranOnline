@@ -11,4 +11,7 @@ class PengembalianBatasController extends Controller
     {
         return view('user.pengembalian_batas.index');
     }
+    public function create(){
+        return view('user.pengembalian_batas.form_pendaftaran');
+    }
 }
