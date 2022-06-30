@@ -158,9 +158,11 @@ Route::post('/pemberian-hak-guna-bangunan-badan-hukum/printPdf', [PemberianHakGu
 
 //Pemberian Hak Pakai Perorangan
 Route::get('/pemberian-hak-pakai-perorangan', [PemberianHakPakaiPerorangan::class, 'index'])->name('pemberian_hak_pakai_perorangan');
+Route::get('/pemberian-hak-pakai-perorangan/form-pendaftaran', [PemberianHakPakaiPerorangan::class, 'create'])->name('pemberian_hak_pakai_perorangan.form_pendaftaran');
 
 // Pemberian Hak Pakai Badan Hukum
 Route::get('/pemberian-hak-pakai-badan-hukum', [PemberianHakPakaiBadanHukum::class, 'index'])->name('pemberian_hak_pakai_badan_hukum');
+Route::get('/pemberian-hak-pakai-badan-hukum/form-pendaftaran', [PemberianHakPakaiBadanHukum::class, 'create'])->name('pemberian_hak_pakai_badan_hukum.form_pendaftaran');
 
 // Pemberian Hak Pakai Instansi/Badan Usaha Pemerintah
 Route::get('/pemberian-hak-pakai-instansi-badan-usaha-pemerintah', [PemberianHakPakaiInstansiBadanUsahaPemerintah::class, 'index'])->name('pemberian_hak_pakai_instansi_badan_usaha_pemerintah');
@@ -207,7 +209,7 @@ Route::get('/pengembalian-batas/form-pendaftaran', [PengembalianBatas::class, 'c
 
 // Pengukuran Untuk Mengetahui Luas
 Route::get('/pengukuran-untuk-mengetahui-luas', [PengukuranUntukMengetahuiLuas::class, 'index'])->name('pengukuran_untuk_mengetahui_luas');
-
+Route::get('/pengukuran-untuk-mengetahui-luas/form-pendaftaran', [PengukuranUntukMengetahuiLuas::class, 'create'])->name('pengukuran_untuk_mengetahui_luas.form_pendaftaran');
 
 //Perpanjangan Hak Rumah Susun
 Route::get('/perpanjangan-hak-milik-rumah-susun',[PerpanjanganHakRusun::class, 'index'])->name('perpanjangan_hak_milik_rumah_susun.form_pendaftaran');

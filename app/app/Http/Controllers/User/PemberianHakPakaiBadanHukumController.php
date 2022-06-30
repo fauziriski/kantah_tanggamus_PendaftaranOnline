@@ -11,4 +11,8 @@ class PemberianHakPakaiBadanHukumController extends Controller
     {
         return view('user.pemberian_hak_pakai_badan_hukum.index');
     }
+    public function create()
+    {
+        return view('user.pemberian_hak_pakai_badan_hukum.form_pendaftaran');
+    }
 }

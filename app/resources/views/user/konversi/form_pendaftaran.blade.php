@@ -239,14 +239,14 @@
                         </table>
                         <table width="100%">
                             <tr>
-                                <td width="11%">Kelurahan</td>
+                                <td width="11%">Pekon</td>
                                 <td class="titik"><input type="text" name="kelurahantanah"><br>
                                 </td>
                             </tr>
                         </table>
                         <table width="100%">
                             <tr>
-                                <td width="17.5%">Kota Administrasi</td>
+                                <td width="17.5%">Kabupaten</td>
                                 <td class="titik"><input type="text" name="kotaadministrasi"></td>
                             </tr>
                         </table>

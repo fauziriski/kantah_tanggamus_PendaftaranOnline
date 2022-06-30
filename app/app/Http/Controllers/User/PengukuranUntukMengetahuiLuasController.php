@@ -11,4 +11,9 @@ class PengukuranUntukMengetahuiLuasController extends Controller
     {
         return view('user.pengukuran_untuk_mengetahui_luas.index');
     }
+    public function create()
+    {
+        return view('user.pengukuran_untuk_mengetahui_luas.form_pendaftaran');
+
+    }
 }

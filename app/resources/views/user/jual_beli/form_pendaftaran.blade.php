@@ -82,7 +82,7 @@
                             Yth. Kepala Kantor Pertanahan<br>
                             Kabupaten Tanggamus<br>
                             JL. Ahmad Yani Komplek Perkantoran Pemda<br>
-                            di Lampung
+                            di Kota Agung
                         </div>
                         <div class="col-12">
                             <br>
@@ -114,7 +114,7 @@
                             <input type="text" class="form-control" name="no"><br>
                             Kecamatan
                             <input type="text" class="form-control" name="kecamatan"><br>
-                            Kelurahan
+                            Pekon
                             <input type="text" class="form-control" name="kelurahan"><br>
                             Dalam hal ini bertindak untuk dan atas nama :
                             <input type="text" class="form-control" name="atasnama"><br>
@@ -122,15 +122,15 @@
                             perihal tersebut diatas dengan sebidang tanah :<br>
                             No. Hak Milik
                             <input type="text" class="form-control" name="nohakmilik"><br>
-                            Kelurahan Hak Milik
+                            Pekon Hak Milik
                             <input type="text" class="form-control" name="kelurahanhakmilik"><br>
                             No. Hak Guna Bangunan
                             <input type="text" class="form-control" name="hakgunabangunan"><br>
-                            Kelurahan Hak Guna Bangunan
+                            Pekon Hak Guna Bangunan
                             <input type="text" class="form-control" name="kelurahanhakgunabangunan"><br>
                             No. Hak Pakai
                             <input type="text" class="form-control" name="hakpakai"><br>
-                            Keluarahan Hak Pakai
+                            Pekon Hak Pakai
                             <input type="text" class="form-control" name="kelurahanhakpakai"><br>
                             Jalan
                             <input type="text" class="form-control" name="jalan"><br>
@@ -142,7 +142,7 @@
                             <input type="text" class="form-control" name="nomoralamattanah"><br>
                             Kecamatan
                             <input type="text" class="form-control" name="kecamatantanah"><br>
-                            Kelurahan
+                            Pekon
                             <input type="text" class="form-control" name="kelurahantanah"><br>
                             Kantor Pertanahan Kabupaten Tanggamus.<br>
 
