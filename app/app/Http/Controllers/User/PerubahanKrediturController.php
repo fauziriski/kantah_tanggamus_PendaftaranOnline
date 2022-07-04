@@ -7,7 +7,13 @@ use Illuminate\Http\Request;
 
 class PerubahanKrediturController extends Controller
 {
-    public function index(){
+    public function index()
+    {
+        return view('user.perubahan_kreditur.index');
+    }
+
+    public function create()
+    {
         return view('user.perubahan_kreditur.form_pendaftaran');
     }
 }

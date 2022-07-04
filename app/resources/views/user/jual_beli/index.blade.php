@@ -43,6 +43,8 @@
             <ol>
                 <li><a href="/jual-beli/form-pendaftaran" target="_blank" class="btn btn-info" role="button">Formulir
                         Pendaftaran Peralihan Jual Beli</a></li>
+                <li><a href="/surat-kuasa" target="_blank" class="btn btn-info" role="button">Surat
+                        Kuasa</a></li>
                 <li><a href="" target="_blank" class="btn btn-info">Surat BPHTB</a></li>
             </ol>
         </div>

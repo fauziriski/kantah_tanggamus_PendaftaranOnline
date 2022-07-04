@@ -41,11 +41,18 @@ use App\Http\Controllers\User\PendaftaranRoyaController as PendaftaranRoya;
 use App\Http\Controllers\User\PerubahanKrediturController as PerubahanKreditur;
 use App\Http\Controllers\User\PeralihanHakTanggunganController as PeralihanHakTanggungan;
 use App\Http\Controllers\User\SuratKeteranganPendaftaranTanahController as SuratKeteranganPendaftaranTanah;
+use App\Http\Controllers\User\BlokirController as Blokir;
+use App\Http\Controllers\User\SitaController as Sita;
+use App\Http\Controllers\User\PengangkatanSitaController as PengangkatanSita;
+use App\Http\Controllers\User\HakTanggunganController as HakTanggungan;
+use App\Http\Controllers\User\PengecekanSertifikatController as PengecekanSertifikat;
 use App\Http\Controllers\User\PenggantianSertipikatKarenaBlankoLamaController as PenggantianSertipikatKarenaBlankoLama;
 use App\Http\Controllers\User\PenggantianSertipikatKarenaRusakController as PenggantianSertipikatKarenaRusak;
 use App\Http\Controllers\User\PenggantianSertipikatKarenaHilangController as PenggantianSertipikatKarenaHilang;
 use App\Http\Controllers\User\PermohonanUntukPengukuranGambarSituasiController as PermohonanUntukPengukuranGambarSituasi;
 use App\Http\Controllers\User\PerubahanHakController as PerubahanHak;
+
+use App\Http\Controllers\User\HomeController as Home;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,6 +71,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//home all form
+//Surat Kuasa
+Route::get('/surat-kuasa', [Home::class, 'createSuratKuasa'])->name('surat_kuasa');
+Route::post('/surat-kuasa/printPdf', [Home::class, 'printPdfSuratKuasa'])->name('surat_kuasa.printPdf');
+//BPHTB
+Route::get('/bphtb', [Home::class, 'createBPHTB'])->name('bphtb');
+Route::post('/bphtb/printPdf', [Home::class, 'printPdfBPHTB'])->name('bphtb.printPdf');
 
 //jual beli
 Route::get('/jual-beli', [JualBeli::class, 'index'])->name('jualbeli');
@@ -211,33 +226,57 @@ Route::get('/pengembalian-batas/form-pendaftaran', [PengembalianBatas::class, 'c
 Route::get('/pengukuran-untuk-mengetahui-luas', [PengukuranUntukMengetahuiLuas::class, 'index'])->name('pengukuran_untuk_mengetahui_luas');
 Route::get('/pengukuran-untuk-mengetahui-luas/form-pendaftaran', [PengukuranUntukMengetahuiLuas::class, 'create'])->name('pengukuran_untuk_mengetahui_luas.form_pendaftaran');
 
-//Perpanjangan Hak Rumah Susun
-Route::get('/perpanjangan-hak-milik-rumah-susun',[PerpanjanganHakRusun::class, 'index'])->name('perpanjangan_hak_milik_rumah_susun.form_pendaftaran');
+//Perpanjangan Hak Milik Atas Satuan Rumah Susun
+Route::get('/perpanjangan-hak-milik-rumah-susun', [PerpanjanganHakRusun::class, 'index'])->name('perpanjangan_hak_milik_rumah_susun');
+Route::get('/perpanjangan-hak-milik-rumah-susun/form-pendaftaran', [PerpanjanganHakRusun::class, 'create'])->name('perpanjangan_hak_milik_rumah_susun.form_pendaftaran');
 
-//Pendaftaran Hak Milik Rusun
-Route::get('/pendaftaran-hak-milik-rusun/form-pendaftaran', [PendaftaranHakMilikRusun::class, 'index'])->name('pendaftaran_hak_milik_rusun.form_pendaftaran');
+//Pendaftaran Hak Milik Atas Satuan Rumah Susun
+Route::get('/pendaftaran-hak-milik-rusun', [PendaftaranHakMilikRusun::class, 'index'])->name('pendaftaran_hak_milik_rusun');
+Route::get('/pendaftaran-hak-milik-rusun/form-pendaftaran', [PendaftaranHakMilikRusun::class, 'create'])->name('pendaftaran_hak_milik_rusun.form_pendaftaran');
 
 //Pendaftaran Roya
-Route::get('/pendaftaran-roya/form-pendaftaran', [PendaftaranRoya::class, 'index'])->name('pendaftaran_roya.form_pendaftran');
+Route::get('/pendaftaran-roya', [PendaftaranRoya::class, 'index'])->name('pendaftaran_roya');
+Route::get('/pendaftaran-roya/form-pendaftaran', [PendaftaranRoya::class, 'create'])->name('pendaftaran_roya.form_pendaftran');
 
 //Perubahan Kreditur
-Route::get('/perubahan-kreditur/form-pendaftaran', [PerubahanKreditur::class, 'index'])->name('perubahan_kreditur.form_pendaftaran');
+Route::get('/perubahan-kreditur', [PerubahanKreditur::class, 'index'])->name('perubahan_kreditur');
+Route::get('/perubahan-kreditur/form-pendaftaran', [PerubahanKreditur::class, 'create'])->name('perubahan_kreditur.form_pendaftaran');
 
 //Peralihan Hak Tanggungan
-Route::get('/peralihan-hak-tanggungan/form-pendaftaran', [PeralihanHakTanggungan::class, 'index'])->name('peralihan_hak_tanggungan.form_pendaftaran');
+Route::get('/peralihan-hak-tanggungan', [PeralihanHakTanggungan::class, 'index'])->name('peralihan_hak_tanggungan');
+Route::get('/peralihan-hak-tanggungan/form-pendaftaran', [PeralihanHakTanggungan::class, 'create'])->name('peralihan_hak_tanggungan.form_pendaftaran');
 
 //Surat Keterangan Pendaftaran Tanah
-Route::get('/surat-keterangan-pendaftaran-tanah/form-pendaftaran', [SuratKeteranganPendaftaranTanah::class, 'index'])->name('surat_keterangan_pendaftaran_tanah.form_pendaftaran');
+Route::get('/surat-keterangan-pendaftaran-tanah', [SuratKeteranganPendaftaranTanah::class, 'index'])->name('surat_keterangan_pendaftaran_tanah');
+Route::get('/surat-keterangan-pendaftaran-tanah/form-pendaftaran', [SuratKeteranganPendaftaranTanah::class, 'create'])->name('surat_keterangan_pendaftaran_tanah.form_pendaftaran');
+
+//Blokir
+Route::get('/blokir', [Blokir::class, 'index'])->name('blokir');
+
+//Sita
+Route::get('/sita', [Sita::class, 'index'])->name('sita');
+
+//Pengangkatan Sita
+Route::get('/pengangkatan-sita', [PengangkatanSita::class, 'index'])->name('pengangkatan_sita');
+
+//Hak Tanggungan
+Route::get('/hak-tanggungan', [HakTanggungan::class, 'index'])->name('hak_tanggungan');
 
 //Penggantian Sertipikat Karena Blanko Lama
-Route::get('/penggantian-sertipikat-karena-blanko-lama/form-pendaftaran', [PenggantianSertipikatKarenaBlankoLama::class, 'index'])->name('penggantian_sertifikat_karena_blanko_lama.form_pendaftaran');
+Route::get('/penggantian-sertipikat-karena-blanko-lama', [PenggantianSertipikatKarenaBlankoLama::class, 'index'])->name('penggantian_sertifikat_karena_blanko_lama');
+Route::get('/penggantian-sertipikat-karena-blanko-lama/form-pendaftaran', [PenggantianSertipikatKarenaBlankoLama::class, 'create'])->name('penggantian_sertifikat_karena_blanko_lama.form_pendaftaran');
 
-//Penggantian Sertipikat Karena Blanko Lama
-Route::get('/penggantian-sertipikat-karena-rusak/form-pendaftaran', [PenggantianSertipikatKarenaRusak::class, 'index'])->name('penggantian_sertifikat_karena_rusak.form_pendaftaran');
+//Penggantian Sertipikat Karena Rusak
+Route::get('/penggantian-sertipikat-karena-rusak', [PenggantianSertipikatKarenaRusak::class, 'index'])->name('penggantian_sertifikat_karena_rusak');
+Route::get('/penggantian-sertipikat-karena-rusak/form-pendaftaran', [PenggantianSertipikatKarenaRusak::class, 'create'])->name('penggantian_sertifikat_karena_rusak.form_pendaftaran');
 
 //Penggantian Sertipikat Karena Hilang
-Route::get('/penggantian-sertipikat-karena-hilang/form-pendaftaran', [PenggantianSertipikatKarenaHilang::class, 'index'])->name('penggantian_sertifikat_karena_hilang.form_pendaftaran');
+Route::get('/penggantian-sertipikat-karena-hilang', [PenggantianSertipikatKarenaHilang::class, 'index'])->name('penggantian_sertifikat_karena_hilang');
+Route::get('/penggantian-sertipikat-karena-hilang/form-pendaftaran', [PenggantianSertipikatKarenaHilang::class, 'create'])->name('penggantian_sertifikat_karena_hilang.form_pendaftaran');
+
+//Pengecekan Sertifikat
+Route::get('/pengecekan-sertifikat', [PengecekanSertifikat::class, 'index'])->name('pengecekan_sertifikat');
 
 //Permohonan Untuk Pengukuran Gambar Situasi
-Route::get('/permohonan-untuk-pengukuran-gambar-situasi/form-pendaftaran', [PermohonanUntukPengukuranGambarSituasi::class, 'index'])->name('permohonan_untuk_pengukuran_gambar_situasi.form_pendaftaran');
-
+Route::get('/permohonan-untuk-pengukuran-gambar-situasi', [PermohonanUntukPengukuranGambarSituasi::class, 'index'])->name('permohonan_untuk_pengukuran_gambar_situasi');
+Route::get('/permohonan-untuk-pengukuran-gambar-situasi/form-pendaftaran', [PermohonanUntukPengukuranGambarSituasi::class, 'create'])->name('permohonan_untuk_pengukuran_gambar_situasi.form_pendaftaran');

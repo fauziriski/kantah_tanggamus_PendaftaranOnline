@@ -207,7 +207,8 @@
                                     Hak Guna Bangunan Badan Hukum</a></td>
                         </tr>
                         <tr>
-                            <td><a href="{{ route('pemberian_hak_pakai_perorangan') }}">Pemberian Hak Pakai
+                            <td><a href="{{ route('pemberian_hak_pakai_perorangan') }}">Pemberian Hak
+                                    Pakai
                                     Perorangan</a></td>
                         </tr>
                         <tr>
@@ -269,46 +270,54 @@
                                     Luas</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Penggangtian Sertifikat Karna Hilang</a></td>
+                            <td><a href="{{ route('penggantian_sertifikat_karena_hilang') }}">Penggangtian Sertifikat
+                                    Karna Hilang</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Penggangtian Sertifikat Karna Rusak</a></td>
+                            <td><a href="{{ route('penggantian_sertifikat_karena_rusak') }}">Penggangtian Sertifikat
+                                    Karna Rusak</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Penggantian Sertifikat Karna Blanko Lama</a></td>
+                            <td><a href="{{ route('penggantian_sertifikat_karena_blanko_lama') }}">Penggantian
+                                    Sertifikat Karna Blanko Lama</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Pengecekan Sertifikat</a></td>
+                            <td><a href="{{ route('pengecekan_sertifikat') }}">Pengecekan Sertifikat</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Surat Keterangan Pendaftaran Tanah</a></td>
+                            <td><a href="{{ route('surat_keterangan_pendaftaran_tanah') }}">Surat Keterangan
+                                    Pendaftaran Tanah</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Blokir</a></td>
+                            <td><a href="{{ route('blokir') }}">Blokir</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Sita</a></td>
+                            <td><a href="{{ route('sita') }}">Sita</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Pengangkatan Sita</a></td>
+                            <td><a href="{{ route('pengangkatan_sita') }}">Pengangkatan Sita</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Hak Tanggungan</a></td>
+                            <td><a href="{{ route('hak_tanggungan') }}">Hak Tanggungan</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Roya</a></td>
+                            <td><a href="{{ route('pendaftaran_roya') }}">Roya</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Peralihan Hak Tanggungan</a></td>
+                            <td><a href="{{ route('peralihan_hak_tanggungan') }}">Peralihan Hak Tanggungan</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Perubahan Kreditur</a></td>
+                            <td><a href="{{ route('perubahan_kreditur') }}">Perubahan Kreditur</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Pendaftaran Hak Milik Atas Satuan Rumah Susun</a></td>
+                            <td><a href="{{ route('pendaftaran_hak_milik_rusun') }}">Pendaftaran Hak Milik Atas
+                                    Satuan Rumah
+                                    Susun</a></td>
                         </tr>
                         <tr>
-                            <td><a href="">Perpanjangan Hak Milik Atas Satuan Rumah Susun</a></td>
+                            <td><a href="{{ route('perpanjangan_hak_milik_rumah_susun') }}">Perpanjangan Hak Milik
+                                    Atas Satuan Rumah
+                                    Susun</a></td>
                         </tr>
 
                     </table>
